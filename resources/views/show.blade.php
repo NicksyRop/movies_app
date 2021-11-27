@@ -1,12 +1,12 @@
 @extends('layouts.main')
 @section('content')
 <div class="movie-info border-b border-gray-800">
-    <div class="container mx-auto px-4 py-16 flex">
+    <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row">
 
-        <img src="{{ asset('images/parasite.jpeg')}}" style="width: 24rems" alt="">
-        <div class="ml-24">
+        <img src="{{ asset('images/parasite.jpeg')}}" class="w:64 md:w-96" style="width: 24rems" alt="">
+        <div class="md:ml-24">
            <h2 class="text-4xl font-semibold">Parasite (2019)</h2>
-           <div class="flex items-center text-gray-400 ">
+           <div class="flex flex-wrap items-center text-gray-400 ">
 
             <span><img src="{{asset('images/star.svg')}}" alt="star" class="h-4"></span>
             <span class="ml-1">85%</span>
@@ -52,6 +52,58 @@
     </div>
 
 
+</div>
+
+<div class="movie-cast border border-b border-gray-800 ">
+    <div class="container mx-auto px-4 py-16 ">
+        <h2 class="text-4xl font-semibold">Cast</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+
+            <div class="mt-8">
+                <a href="">
+                    <img src="{{ asset('images/parasite.jpeg')}}" class="hover:opacity-75 transition ease-in-out duration-150" alt="parasite" class="">
+                </a>
+                <div class="mt-2">
+                    <a href="" class="mt-2 hover:text-gray-300" >Parasite</a>
+                    <div class="flex items-center text-gray-400 ">
+
+                        <span><img src="{{asset('images/star.svg')}}" alt="star" class="h-4"></span>
+                        <span class="ml-1">85%</span>
+                        <span class="mx-2">|</span>
+                        <span>Feb 20 , 2021</span>
+
+                    </div>
+                    <div class="text-gray-400">
+                        Action , Thriller , Comedy
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="mt-8">
+                <a href="">
+                    <img src="{{ asset('images/parasite.jpeg')}}" alt="parasite" class="">
+                </a>
+
+            </div>
+            <div class="mt-8">
+                <a href="">
+                    <img src="{{ asset('images/parasite.jpeg')}}" alt="parasite" class="">
+                </a>
+
+
+            </div>
+            <div class="mt-8">
+                <a href="">
+                    <img src="{{ asset('images/parasite.jpeg')}}" alt="parasite" class="">
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
 </div>
 
 @endsection
