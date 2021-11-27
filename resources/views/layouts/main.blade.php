@@ -7,9 +7,41 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <title>Movie App</title>
 </head>
-<body>
+<body class="font-sans bg-gray-900 text-white">
 
-    <nav>Nav Goes Here</nav>
+    <nav class="border-b border-grey-800 ">
+        <div class="container mx-auto flex items-center justify-between px-4 py-6">
+            <ul class="flex items-center">
+                <li>
+                    <a href="#"><img src="{{ asset('images/movie.svg')}}" alt=""></a>
+                </li>
+                <li class="ml-16">
+                    <a href="#" class="hover:text-gray-300">Movies</a>
+
+                </li>
+                <li class="ml-6">
+                    <a href="#" class="hover:text-gray-300">Tv Shores</a>
+
+                </li>
+                <li class="ml-6">
+                    <a href="#" class="hover:text-gray-300">Actors</a>
+
+                </li>
+            </ul>
+
+            <div class="flex items-center">
+                <div class="relative">
+                    <input type="text" class="bg-gray-600 rounded-full w-64 px-4 pl-8 text-sm py-1 ml- focus:outline-none focus:ring focus:border-blue-300 " placeholder="search">
+                </div>
+                <div class="ml-4">
+                    <a href="">
+                        <img src="{{ asset('images/avatar.jpeg')}}" class="h-6" alt="">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
 
     @yield('content')
 
